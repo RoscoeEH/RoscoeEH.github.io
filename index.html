@@ -110,7 +110,7 @@
         <h1>Roscoe Elings-Haynie</h1>
         <img src="IMG_5445.jpg" alt="Your Photo">
         <!-- Dark Mode Toggle Button -->
-        <button id="dark-mode-toggle">☀️ Theme</button>
+        <button id="dark-mode-toggle">☀️ Light Mode</button>
     </header>
     <main>
         <section class="description">
@@ -141,7 +141,7 @@
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
             // Change button icon
-            toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀️ Theme' : '🌙 Theme';
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
         });
     </script>
 </body>

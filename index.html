@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roscoe's Projects</title>
     <style>
+        /* Define color variables for both light and dark themes */
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --header-bg-color: #333;
+            --header-text-color: white;
+            --project-bg-color: white;
+            --project-shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode {
+            --bg-color: #222;
+            --text-color: #f4f4f4;
+            --header-bg-color: #444;
+            --header-text-color: #f4f4f4;
+            --project-bg-color: #333;
+            --project-shadow-color: rgba(255, 255, 255, 0.1);
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -12,60 +31,86 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #f4f4f4;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
+
         header {
             text-align: center;
             padding: 20px;
-            background-color: #333;
-            color: white;
+            background-color: var(--header-bg-color);
+            color: var(--header-text-color);
             width: 100%;
+            position: relative;
         }
+
+        /* Dark Mode Button */
+        #dark-mode-toggle {
+            position: absolute;
+            top: 20px;
+            right: 68px; /* Adjusted to move half an inch (48px) back right */
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--header-text-color);
+            font-size: 18px;
+        }
+
         header img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
         }
+
         main {
             padding: 20px;
             max-width: 800px;
             width: 100%;
         }
+
         .description {
             margin: 20px 0;
         }
+
         .projects {
             list-style-type: none;
             padding: 0;
         }
+
         .projects li {
             margin: 10px; 
             padding: 8px;
-            background: white;
+            background: var(--project-bg-color);
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px var(--project-shadow-color);
         }
+
         .projects h3 {
             margin: 0 0 10px 0;
         }
+
         .projects p {
             margin: 0 0 10px 0;
             line-height: 1.25;
         }
+
         .projects a {
             text-decoration: none;
             color: #007BFF;
         }
+
         .projects a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
-<body>
+<body class="dark-mode">
     <header>
         <h1>Roscoe Elings-Haynie</h1>
         <img src="IMG_5445.jpg" alt="Your Photo">
+        <!-- Dark Mode Toggle Button -->
+        <button id="dark-mode-toggle">☀️ Theme</button>
     </header>
     <main>
         <section class="description">
@@ -75,19 +120,33 @@
             <h2>My Projects</h2>
             <ul>
                 <li>
-                    <h3><a href="https://github.com/RoscoeEH/Minesweeper-Solver/tree/main" target="_blank">Simple Minesweeper with Linear Algebra Solver</a></h3>
-                    <p>I really enjoy the game minesweeper. It was my go to game to subtlely play on my computer during school since I was in 9th grade. The idea is to write a simple playable version of minesweeper and the a solver to solve a given board, both implimented in python. The solver would first take the naive approuch of marking all obvious bombs and clearing the easily veiwed non-bombs. Next, use Gaussian Elimination to determine the locations of more bombs and start from step 1. If no squares can be determined completely it will the go to probabilistic analysis to determine what the best guess is. Using those steps it will have a decent shot at clearing any board.</p>
+                    <h3><a href="https://github.com/RoscoeEH/ZeroKnowledgeProofForNorinori/blob/main/Roscoe_Thesis.pdf" target="_blank">A ZK-Proof for Norinori</a></h3>
+                    <p>For my undergraduate thesis I developed a zero-knowledge proof for the pen-and-paper game Norinori and proved that it meets the criteria of a cryptographic ZK-proof. Linked is a pdf copy of my thesis. I could give a further description, but I fear if I start this will become far too long. If you are interested, I suggest you go read the abstract to learn more.</p>
                 </li>
                 <li>
-                    <h3><a href="https://github.com/RoscoeEH/ZeroKnowledgeProofForNorinori/blob/main/Roscoe_Thesis.pdf" target="_blank">A ZK-Proof for Norinori</a></h3>
-                    <p>For my undergraduate thesis I developed a zero-knowledge proof for the pen-and-paper game norinori and proved that it meets the criteria of a cryptographic ZK-proof. Linked is a pdf copy of my thesis. I could give a furhter description, but I fear if I start this will become far to long. If you are interested I suggest you go read the abstract to learn more.</p>
+                    <h3><a href="https://github.com/RoscoeEH/Minesweeper-Solver/tree/main" target="_blank">Simple Minesweeper with Linear Algebra Solver</a></h3>
+                    <p>I really enjoy the game minesweeper. It was my go to game to subtly play on my computer during school since I was in 9th grade. The idea is to write a simple playable version of minesweeper and then a solver to solve a given board, both implemented in Python. The solver would first take the naive approach of marking all obvious bombs and clearing the easily viewed non-bombs. Next, it would use Gaussian Elimination to determine the locations of more bombs and start from step 1. If no squares can be determined completely, it will then go to probabilistic analysis to determine what the best guess is. Using those steps, it will have a decent shot at clearing any board.</p>
                 </li>
                 <li>
                     <h3><a href="https://github.com/RoscoeEH/automated-plant-watering" target="_blank">Plant Moisture Sensors Run on Raspberry Pi</a></h3>
-                    <p>I have a series of plants across my house and I always check if they need water by sticking my finger in the soil to feel if it is dry. This is my attempt to automate that process, I have a Raspberry Pi connected to moisture sensors that determine the level then send an email reporting which ones need water. These are the python scripts run on the device.</script></p>
+                    <p>I have a series of plants across my house and I always check if they need water by sticking my finger in the soil to feel if it is dry. This is my attempt to automate that process. I have a Raspberry Pi connected to moisture sensors that determine the level, then send an email reporting which ones need water. These are the Python scripts run on the device.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/RoscoeEH/ZeroKnowledgeProofForNorinori/blob/main/Roscoe_Thesis.pdf" target="_blank">A ZK-Proof for Norinori</a></h3>
+                    <p>For my undergraduate thesis I developed a zero-knowledge proof for the pen-and-paper game Norinori and proved that it meets the criteria of a cryptographic ZK-proof. Linked is a pdf copy of my thesis. I could give a further description, but I fear if I start this will become far too long. If you are interested, I suggest you go read the abstract to learn more.</p>
                 </li>
             </ul>
         </section>
     </main>
+
+    <script>
+        // Dark Mode Toggle Logic
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            // Change button icon
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀️ Theme' : '🌙 Theme';
+        });
+    </script>
 </body>
 </html>

@@ -114,7 +114,7 @@
     </header>
     <main>
         <section class="description">
-            <p>Hi! I studied computer science and math at Reed College and currently work in information security. Within the realm of computer science I am interested in cryptography, cyber-security, low level systems and computer networking to name a few. Outside of that, I hold many scattered interests including but not limited to: rock climbing, weightlifting and painting. Below are descriptions and links to a few projects that are either more recent, ongoing, or took a disproportionate amount of work. You may look at my full <a href="https://github.com/RoscoeEH">GitHub Profile</a> if that is of interest.</p> 
+            <p>Hi! I’m a computer science and mathematics graduate from Reed College, currently working in information security. I primarily write in Rust and Python, and I’m exploring OCaml for future projects. My professional interests include cryptography, cybersecurity, low-level systems, and computer networking. Outside of work, I enjoy rock climbing, weightlifting, and painting. Below are some of my key projects—those that are recent, ongoing, or have required significant effort. You can also explore my full <a href="https://github.com/RoscoeEH">GitHub Profile</a> for more.</p> 
         </section>
         <section class="projects">
             <h2>My Projects</h2>
@@ -124,10 +124,13 @@
                     <h3><a href="https://github.com/RoscoeEH/Captcha-solver" target="_blank">Captcha Solver using a Convolutional Neural Network (CNN) and Long Short-Term Memory (LSTM) Network</a></h3>
                     <p>I used PyTorch implement a CNN and LSTM that solves captchas. The captchas are generated using the python captcha module, each one corresponds to a random alphanumeric string between 5-8 characters. After training, the performance is evaluated and parameters are adjusted to better optimize training</a>.</p>
                 </li>
-
                 <li>
                     <h3><a href="https://github.com/RoscoeEH/PasswordManager" target="_blank">Rust Password Manager</a></h3>
                     <p>An async client-server application written in Rust that stores encrypted passwords on the server and sends the ciphertext to the client to be decrypted locally. The encryption is done with 256-bit AES-GCM. The AES key is generated via PBKDF. No plaintext keys are transmitted or stored on the server at any time. This is done with a number of other Rust packages including Rust-Crypto (cryptography), Tokio (client-server functionality), Serde (serialization), RocksDB (long-term storage), and Ratatui (terminal UI).</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/RoscoeEH/File-Encryption" target="_blank">File Encryption Tool using AES-256-GCM and Argon2</a></h3>
+                    <p>This command-line tool enables secure file encryption and decryption using AES-256-GCM for authenticated encryption and Argon2 for password-based key derivation. The tool stores encrypted files in a single `.enc` file containing all necessary parameters for decryption, including salt, nonce, original filename, and ciphertext. It also features memory zeroization of sensitive data and password verification during encryption. Prior to this I used GPG but looking at its documentation I wanted a solution with more modern cryptographic methods.</p>
                 </li>
                 <li>
                     <h3><a href="https://github.com/RoscoeEH/ZeroKnowledgeProofForNorinori/blob/main/Roscoe_Thesis.pdf" target="_blank">A ZK-Proof for Norinori</a></h3>

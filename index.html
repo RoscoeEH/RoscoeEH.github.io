@@ -119,7 +119,11 @@
         <section class="projects">
             <h2>My Projects</h2>
             <ul>
-              
+                <li>
+                    <h3><a href="https://github.com/RoscoeEH/CIPHER" target="_blank">CIPHER: Command-line Interface for Protection, Hardening, and Endpoint Reinforcement</a></h3>
+                    <p>CIPHER is a command-line tool for modern cryptographic operations. It supports authenticated encryption, key derivation, asymmetric encryption, and post-quantum cryptographic operations. Encrypted files are stored in a compact .enc format containing all necessary parameters for decryption. CIPHER also includes memory zeroization of sensitive material, password verification, and tools for secure key generation and management. Originally built to replace GPG in my workflow, CIPHER is designed with a focus on usability, simplicity, and modern cryptographic primitives. Disclaimer: CIPHER is in early development; the description here describes the intent of the final project but may not be representative of current functionality.</p>
+                </li>
+
               <li>
                     <h3><a href="https://github.com/RoscoeEH/Captcha-solver" target="_blank">Captcha Solver using a Convolutional Neural Network (CNN) and Long Short-Term Memory (LSTM) Network</a></h3>
                     <p>I used PyTorch implement a CNN and LSTM that solves captchas. The captchas are generated using the python captcha module, each one corresponds to a random alphanumeric string between 5-8 characters. After training, the performance is evaluated and parameters are adjusted to better optimize training</a>.</p>
@@ -127,10 +131,6 @@
                 <li>
                     <h3><a href="https://github.com/RoscoeEH/PasswordManager" target="_blank">Rust Password Manager</a></h3>
                     <p>An async client-server application written in Rust that stores encrypted passwords on the server and sends the ciphertext to the client to be decrypted locally. The encryption is done with 256-bit AES-GCM. The AES key is generated via PBKDF. No plaintext keys are transmitted or stored on the server at any time. This is done with a number of other Rust packages including Rust-Crypto (cryptography), Tokio (client-server functionality), Serde (serialization), RocksDB (long-term storage), and Ratatui (terminal UI).</p>
-                </li>
-                <li>
-                    <h3><a href="https://github.com/RoscoeEH/File-Encryption" target="_blank">File Encryption Tool using AES-256-GCM and Argon2</a></h3>
-                    <p>This command-line tool enables secure file encryption and decryption using AES-256-GCM for authenticated encryption and Argon2 for password-based key derivation. The tool stores encrypted files in a single `.enc` file containing all necessary parameters for decryption, including salt, nonce, original filename, and ciphertext. It also features memory zeroization of sensitive data and password verification during encryption. Prior to this I used GPG but looking at its documentation I wanted a solution with more modern cryptographic methods.</p>
                 </li>
                 <li>
                     <h3><a href="https://github.com/RoscoeEH/ZeroKnowledgeProofForNorinori/blob/main/Roscoe_Thesis.pdf" target="_blank">A ZK-Proof for Norinori</a></h3>

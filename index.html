@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roscoe's Projects</title>
+    <title>Roscoe</title>
     <style>
-        /* Define color variables for both light and dark themes */
+        /* Define color variables */
         :root {
             --bg-color: #f4f4f4;
             --text-color: #333;
@@ -48,7 +48,7 @@
         #dark-mode-toggle {
             position: absolute;
             top: 20px;
-            right: 68px; /* Adjusted to move half an inch (48px) back right */
+            right: 68px;
             cursor: pointer;
             background: none;
             border: none;
@@ -114,10 +114,10 @@
     </header>
     <main>
         <section class="description">
-            <p>Hi! I’m a computer science and mathematics graduate from Reed College, currently working in information security. I primarily write in Rust and Python, and I’m exploring OCaml for future projects. My professional interests include cryptography, cybersecurity, low-level systems, and computer networking. Outside of work, I enjoy rock climbing, weightlifting, and painting. Below are some of my key projects—those that are recent, ongoing, or have required significant effort. You can also explore my full <a href="https://github.com/RoscoeEH">GitHub Profile</a> for more.</p> 
+            <p>Hi! I’m a computer science and mathematics graduate from Reed College, currently working in information security. I primarily write in Rust and Python, and I’m exploring OCaml for future projects. My professional interests include cryptography, cybersecurity, low-level systems, and computer networking. Outside of work, I enjoy rock climbing, woodworking, and painting. Below are some of my projects; they are sorted by some mix of recency and effort. You can also explore my full <a href="https://github.com/RoscoeEH">GitHub Profile</a> for more.</p> 
         </section>
         <section class="projects">
-            <h2>My Projects</h2>
+            <h2>Projects</h2>
             <ul>
                 <li>
                     <h3><a href="https://github.com/RoscoeEH/KeyCrypt?tab=readme-ov-file#keycrypt" target="_blank">KeyCrypt: A client-server based challenge-response protocol for keypads protecting servers in air-gapped systems.</a></h3>
@@ -128,8 +128,12 @@
                     <p>CIPHER is a command-line tool for modern cryptographic operations. It supports authenticated encryption, key derivation, asymmetric encryption, and post-quantum cryptographic operations. Encrypted files are stored in a compact .enc format containing all necessary parameters for decryption. CIPHER also includes memory zeroization of sensitive material, password verification, and tools for secure key generation and management. Originally built to replace GPG in my workflow, CIPHER is designed with a focus on usability, simplicity, and modern cryptographic primitives. </p>
                 </li>
                 <li>
-                    <h3><a href="https://github.com/RoscoeEH/fyxie" target="_blank">Fyxie: Functional Programming Language with Single Complilation</a></h3>
+                    <h3><a href="https://github.com/RoscoeEH/fyxie" target="_blank">Fyxie: Functional Programming Language with Single Compilation</a></h3>
                     <p>Fyxie is a programming language that, like a fixed-gear bike, embraces the beauty of minimalism. It is a purely functional language with a syntax inspired by LISP, emphasizing simplicity and composability. Fyxie uses single-compilation to enable whole-program analysis, allowing for robust exhaustiveness checking, dead code elimination, and aggressive optimization. The result is a language that prioritizes clarity, safety, and performance, all within a minimal core. This project is being done in collaboration with <a href="https://github.com/TCCQ">TCCQ</a>. </p>
+                </li>
+              <li>
+                    <h3><a href="https://github.com/RoscoeEH/Rumble-Search" target="_blank">Rumble Search: Agentic Retrieval Search Over Fixed Documentation</a></h3>
+                    <p>An agentic retrieval system built in Python that searches over a locally stored documentation index. Designed to help developers quickly find what they need across API docs, academic papers, RFCs, and technical standards, all without relying on external search engines. I often find the limited scope of the search can be helpful in cutting out some of the noise that exists in online systems.</p>
                 </li>
               <li>
                     <h3><a href="https://github.com/RoscoeEH/Captcha-solver" target="_blank">Captcha Solver using a Convolutional Neural Network (CNN) and Long Short-Term Memory (LSTM) Network</a></h3>
@@ -146,6 +150,10 @@
                 <li>
                     <h3><a href="https://github.com/RoscoeEH/Minesweeper-Solver/tree/main" target="_blank">Simple Minesweeper with Linear Algebra Solver</a></h3>
                     <p>I really enjoy the game minesweeper. It was my go to game to subtly play on my computer during school since I was in 9th grade. The idea is to write a simple playable version of minesweeper and then a solver to solve a given board, both implemented in Python. The solver would first take the naive approach of marking all obvious bombs and clearing the easily viewed non-bombs. Next, it would use Gaussian Elimination to determine the locations of more bombs and start from step 1. If no squares can be determined completely, it will then go to probabilistic analysis to determine what the best guess is. Using those steps, it will have a decent shot at clearing any board.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/RoscoeEH/HTPC_App_Manager" target="_blank">Home-Theater PC App Manager</a></h3>
+                    <p>The modern age of the internet is somewhat disconcerting with the amount of collected data and constant attempt to show ads. As a way to distance myself a little more from this I use a standing gaming PC as a home theater in place of a smart TV. This is the general framework built in rust for displaying app icons, triggering shell scripts, and integrating a remote control. This way I can access media services while behind a VPN, privacy focused browsers, and ad-block.</p>
                 </li>
                 <li>
                     <h3><a href="https://github.com/RoscoeEH/automated-plant-watering" target="_blank">Plant Moisture Sensors Run on Raspberry Pi</a></h3>
